@@ -6,7 +6,7 @@ import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
 
 const Movie = ({item}) => {  
     const [like, setLike] = useState(false)  
-    const [save, setSaved] = useState(false)
+    const [setSaved] = useState(false)
     const {user} = UserAuth();
 
     const MovieID = doc(db, 'users', `${user?.email}`)
@@ -22,7 +22,7 @@ const Movie = ({item}) => {
             img: item.backdrop_path
           })
         })
-      } else{save &&
+      } else{
         alert('please log in to save a movie')
       }
     }
