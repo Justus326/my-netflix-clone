@@ -22,7 +22,7 @@ const Movie = ({item}) => {
             img: item.backdrop_path
           })
         })
-      } else{save $$
+      } else{save &&
         alert('please log in to save a movie')
       }
     }
